@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE =edge">
+    <meta http-equiv="viewport" content="width=, initial-scale=1.0">
+    <title>Case Detection</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
+  </head>
+  <body>
+    
+     <div class="contaner">
+      <div class="header">
+        <p>Ticket Maker</p>
+        <span style="color: #fff; font-size: 9px; padding-left: 10px;">Developed by:ENG-M</span>
+      </div>
+      <div class="header2">
+        <p>Case Detection</p>
+        <div><a href="">Home</a></div>
+      </div>
+        <div class="Basic">
+          
+          <div class="casebox">
+            <div class="caseDetection">Case Detection</div>
+            <div style="text-align: right;"><input type="reset" value="Reset"   id="resetAll"></div>
+              <label>Customer Name: <input type="text" id="CSTname"></label>
+              <br>
+              <br>
+              <label>CPE Type: <select name="" id="select">
+                <option value="select an option" hidden>Select an Option</option>
+                <option value="select an option">TP-Link</option>
+                <option value="select an option">TE Data</option>
+                <option value="select an option">DG8045</option>
+              </select>
+              </label>
+              <br>
+              <br>
+              <br>
+              <textarea id="" placeholder="Paste here any generate you have before coming to this case (if any)"></textarea>
+              <hr>
+              <br>
+              <div class="inputBox">
+                    <input type="checkbox" value="Check POP outage: No outage," id="pop">
+                    <label for="pop">Check POP outage</label>
+                    <div class="hiden" id="popBox">
+                      <div class="styleBox">
+                        <dl>
+                          <dt>
+                            <span>If there is an outage</span>
+                            <dd style="padding-left: 40px;"><span style="color: rgb(255, 0, 0);">Follow</span> WE Mobile Line Adjustment <span style="color: #ff00d4; cursor: pointer;">wiki Link - [ open WE Mobile Line TM Case Here ]</span></dd>
+        
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <form>
+                      <br>
+                    <label><input type="checkbox" id="checkTTS" value="Check TTS History:"> Check TTS History before starting troubleshooting, whatever the ticket open or closed</label>
+                    <br><br>
+                    <div id="checkboxTTS">
+                        <input type="radio" name="TTSHistory" id="checkRadio_1">
+                        <label for="checkRadio_1"><span style="color: red;">there is an update CPE problem withe Close Code (74) withn 30 days</span></label>
+                        <input type="radio" name="TTSHistory" id="checkClose">
+                        <label for="checkClose"><span style="color: red;">Close ticket</span></label>
+                     
+                        <label><input type="radio" name="TTSHistory" id="checkRadio_2"> <span style="color: red;">Open ticket</span></label>     
+                        <label><input type="radio" name="TTSHistory" id="checkRadio_3"> <span style="color: red;">No ticket</span></label>
+                        <input type="reset" value="Clear">
+
+                          <div class="hiden">
+                            <div class="styleBox">
+                                <span style="color: red;">refer</span> to CPE Problem update <span style="color: red;">Link</span>
+                            </div>
+                        </div>
+                          <div class="checkClosehiden">
+                            <div style="margin: 15px 0;">
+                              <input type="checkbox" id="inputTicket">
+                              <label for="inputTicket">Closed ticket for</label>
+                              <div class="ClosedTicketHiden"  style="margin: 15px 0;" >
+                                <label><input type="radio" name="ClosedTicket" id="same_problems"> <span style="color: red;">same problems</span></label>     
+                                <label><input type="radio" name="ClosedTicket" id="diProblems"> <span style="color: red;">different problems</span></label>
+
+                                <div class="styleBox" id="same_problemsBox">
+                                  <span style="color: red;">Art</span> according to last update
+                                </div>
+                                <div class="styleBox" id="diProblemsBox">
+                                  <span style="color: red;">Follow</span> next step
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="hiden" id="R2">
+
+                          <label><input type="checkbox" id="PoolTicket"> Current Pool of Ticket</label>
+
+
+                          <div id="PoolTicketBox" style="margin: 15px 0;">
+                            <label><input type="radio" name="Open_ticket" id="IU_Maintenance"> <span style="color: red;">IU Maintenance</span></label>     
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">Installation Operation</span></label>     
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">CC-Second Lvel Support</span></label>     
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">NOC</span></label>     <br>
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">CC-Follow Up</span></label>     
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">SLS-IVR Automation or Customer 360</span></label>     
+                            <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">Any other pool</span></label>
+
+                                
+                          <div class="hiden" id="IU_MaintenanceBox">
+                            <label><input type="checkbox" id="Customer_issue"> Customer issue</label>
+                            <div class="hiden">
+                              <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">Installation Operation</span></label>     
+                              <label><input type="radio" name="Open_ticket" id="Open_ticket"> <span style="color: red;">CC-Second Lvel Support</span></label> 
+                            </div>
+                          </div>
+                          </div>
+                      
+                        </div>
+    
+                      </form>
+                    </div><!-- checkboxTTS -->
+                    <form>
+                    <label><input type="checkbox" id="checkRadio_4"> Check FBB Account Status on BSS</label>
+                    <br><br>
+                        <div id="Account_Status">
+                          <label><input type="radio" name="Account" id="checkRadio_5"> <span style="color: blue;">Active</span></label>     
+                          <label><input type="radio" name="Account" id="checkRadio_6"> <span style="color: red;">suspended</span></label> 
+                          <input type="reset" value="Clear">
+                        </form>
+
+                          <div id="Active">
+                            <br>
+                            <label><input type="checkbox" id="checkRadio_7"> Line disabled or enabled ?</label>
+                          
+                            <div class="AllDisplay" id="disabled_enabled">
+                              <br>
+
+                              <label><input type="radio" name="disabled_enabled" id="checkRadio_8"> <span style="color: red;">Enabled</span></label>
+                              &nbsp; 
+                              <label><input type="radio" name="disabled_enabled" id="checkRadio_9"> <span style="color: red;">Disabled without cancelition order</span></label> 
+                              <div class="AllDisplay" id="enabled">
+                                <br>
+
+                                <label><input type="checkbox" id="checkRadio_10"> Is the line Blocked</label>
+                                <br>
+                                    <div class="AllDisplay" id="line_Blocked">
+                                      <br>
+                                      <label><input type="radio" name="line_Blocked" id="checkRadio_11"> <span style="color: blue;">Not Blocked</span></label> 
+                                      &nbsp; 
+                                      <label><input type="radio" name="line_Blocked" id="checkRadio_12"> <span style="color: red;">Yes Blocked</span></label>
+
+                                      <div class="AllDisplay" id="subscription">
+                                        <br>
+                                        <label><input type="checkbox" id="checkRadio_13"> Check customer subscription</label>
+                                        <br>
+                                        <div class="AllDisplay" id="Check_customer">
+                                          <br>
+                                          <label><input type="radio" name="subscription" id="checkRadio_14"> <span style="color: red;">Normal Customer</span></label> 
+                                          &nbsp; 
+                                          <label><input type="radio" name="subscription" id="checkRadio_15"> <span style="color: red;">Option Pack/Famly/indigo</span></label>
+
+                                          <br>
+                                          <div class="AllDisplay" id="overlapping">
+                                            <br>
+                                            <label><input type="checkbox" id="checkRadio_16"> Check if customer has "Voice overlapping" ?</label>
+                                            <div class="AllDisplay" id="Yes_No">
+                                              <br>
+                                              <label><input type="radio" name="Yes_No" id="checkRadio_17"> <span style="color: red;">Yes</span></label> 
+                                              &nbsp; 
+                                              <label><input type="radio" name="Yes_No" id="checkRadio_18"> <span style="color: red;">No</span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                         
+                                      </div>
+                                    </div>
+                                
+                              </div><!-- enabled -->
+                            </div><!-- disabled_enabled -->
+                          </div>
+                          <div class="boxRadio" id="suspended">
+                          </div>
+                        </div>
+              <br>
+              <br>
+              <div style="border: 3px solid black; padding: 15px 50px 15px 50px; width: fit-content;">
+                <dl>
+                  <dt>
+                    <span style="color: red;">Precaution</span>
+                    <dd style="padding-left: 40px;"><span style="color: blue;">For port Timed Out / Access Denied Troubleshooting</span> refer to wiki article [<span style="color: blue; cursor: pointer;">open article</span>]</dd>
+
+                  </dt>
+                </dl>
+                
+              </div>
+              <br><br>
+              <form>
+                <label><input type="checkbox" id="CustomerInput" > Customer Input</label>
+
+              <div class="AllDisplay vv" id="Customerchose">
+                <br>
+                 
+                <label><input type="radio" name="CustomerInputBox" id="Internet_Not_working"> <span style="color: red;">Internet Not working</span></label>&nbsp; 
+                <label><input type="radio" name="CustomerInputBox" id="voice_down"> <span style="color: red;">Internet working but voice down</span></label>&nbsp;<br> 
+                <label><input type="radio" name="CustomerInputBox" id="unstable"> <span style="color: red;">Internet working but unstable (curently ADSL UP)</span></label>&nbsp; 
+                <label><input type="radio" name="CustomerInputBox" id="unstable_down"> <span style="color: red;">unstable but curently ADSL down</span></label>&nbsp; 
+                <label><input type="radio" name="CustomerInputBox" id="Slow"> <span style="color: red;">Internet working but Slow</span></label>&nbsp; <br>
+                <label><input type="radio" name="CustomerInputBox" id="logical"> <span style="color: red;">Internet working but ask for logical unsupported case</span></label>&nbsp; 
+                <label><input type="radio" name="CustomerInputBox" id="Gaming"> <span style="color: red;">Gaming Issue (problems Related to Games) or IOT Cases</span></label>&nbsp; 
+                <label><input type="radio" name="CustomerInputBox" id="Other"> <span style="color: red;">Other</span></label> <input type="reset" onclick="clerr()"  value="Clear"></input>
+                <br>
+                <div class="AllDisplay" id="Matrix_sutatss">
+                  <br>
+                  <div style="border: 3px solid black; padding: 15px 150px 15px 150px; width: fit-content;">
+               
+                        <p style="padding-left: 40px; font-size: 18px;"><span style="color: blue;"> <span style="color: red;">هنتأكد من العميل</span> هل الخدمه فاصلة تماما ولا بتفصل وتشتغل </p>
+                    
+                  </div>
+                  <br>
+                  <label><input type="checkbox" id="Router"> Router ADSL LED (VS) Matrix Status</label>
+                    <div class="AllDisplay" id="Router_sutats">
+                      <br>
+                      <label><input type="radio" name="Matrix_sutats" id="Both_UP"> <span style="color: red;">Both UP</span></label> 
+                      &nbsp; 
+                      <label><input type="radio" name="Matrix_sutats" id="Both_Down"> <span style="color: red;">Both Down</span></label>
+                      <label><input type="radio" name="Matrix_sutats" id="Different"> <span style="color: red;">Different</span></label>
+                    </div>
+                    <div class="AllDisplay" id="Both_DownBox">
+                      <br>
+                      <div style="border: 3px solid black; padding: 15px 150px 15px 50px; width: 690px;">
+                   
+                            <p style="padding-left: 0px; font-size: 17px;"><span style="color: red;">Query NST</span> For The Past 12 Hours</p>
+                        
+                      </div>
+                      <br>
+                      <label><input type="checkbox" id="logs"> Is there 3 logs exit during last 12 hours with minimum 1 log during last hours ?</label>
+                    </div>
+                    <div class="AllDisplay" id="DifferentBox">
+                      <br>
+                      <label><input type="checkbox" id="Query_IP"> Query IP by Username</label>
+                      <div class="AllDisplay" id="Query_IPBox">
+                        <br>
+                        <label><input type="radio" name="optained" id="Not_IP" value="Not optained IP"> <span style="color: red;">Not optained IP</span></label>&nbsp;
+                        <label><input type="radio" name="optained" id="optained_IP"> <span style="color: red;">optained IP</span></label>
+
+                        <div class="AllDisplay" id="optained_IPBox">
+                          <br>
+                        <div style="border: 3px solid black; padding: 15px 150px 15px 50px; width: 690px;">
+                     
+                              <p style="padding: 0 0 15px 0">Query NST logs by NAS Port ID</p>
+                             <div style="padding-left: 50px;">
+                              <div><label><input type="radio" name="optained_IP" id="Both_Down"><span  style="color: blue;"> IF Accepted / Login Wrong Credentials</span></label>
+                                <p  style="padding-left: 50px;"><span style="color: red;">Follow</span> next "restart" step</p>
+                              </div>
+                              <br>
+                              <div><label><input type="radio" name="optained_IP" id="Both_Down"><span  style="color: blue;"> Else IF Wrong Nas port</span></label>
+                                <p  style="padding-left: 50px;"><span style="color: red;">Follow</span> next "restart" step</p>
+                              </div>
+                             </div>
+                         
+                        </div>
+                        <br>
+
+                        <div style="border: 3px solid black; padding: 15px 150px 15px 50px; width: 690px;">
+                          
+                          <label><input type="checkbox"><span style="color: red;"> Restart port and track ADSL while restarting</span> <span style="color: blue;">then Check Next Step</span></label>
+                           
+                         </div>
+                         <br>
+                         <label><input type="checkbox" id="matches"> Router ADSL LED matches Matrix Status (while restarting)</label>
+                          <div class="AllDisplay" id="matchesBox">
+                            <br>
+                            <label><input type="radio" name="matches" id="matches_yes"> <span style="color: red;">Yes</span></label>
+                            <label><input type="radio" name="matches" id="matches_no"> <span style="color: red;">No</span></label>
+
+                            <div class="AllDisplay" id="matches_no_box">
+                              <br>
+                              <div style="border: 3px solid black; padding: 15px 150px 15px 50px; width: 690px;">
+                          
+                                <p><span style="color: red;"> Handle</span> <span style="color: blue;">as Wrong Card & port</span><label><a href="WrongCard.html" target="_blank" style="color: rgb(225, 0, 255); text-decoration: none;"> - [take generate to it]</a></p></label>
+                                 
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+              <div style="margin-top: 90px;">
+                <input type="checkbox" id="Escalation">
+                <label for="Escalation">Escalation <span style="color: red;">(IU) [Voice Overlaping]</span></label>
+                <div class="hiden">
+                      <div class="styleBox">
+                        <p>check Escalation Checks before Escalation - <span style="color: red;">[open here]</span></p>
+                      </div>
+                      Mobile Number <input type="text"><br>
+                      <span style="color: red;">Overlaping Number (if avail)</span> <input type="text">
+
+                      <div style="padding: 25px; border: 1px solid #ddd;  width: 500px; margin: 15px 0;">
+                        <input type="checkbox" id="btnVoice" hidden>
+                         <label for="btnVoice" class="BSSbtn">BSS - Voice Overlaping</label>
+                         <div class="hiden">
+                          <div style="width: 100%; background-color: #ea9681; height: 200px; margin: 10px 0;">
+                            eeee
+                          </div>
+                      </div>
+                </div>
+              </div>
+              <hr style="margin: 10px 0;">
+              <span style="background-color: darkslategrey; color: #fff; padding: 1px 7px; cursor: pointer;" onclick="textareaF()">Generate Update >></span>
+              <h2 style="padding: 20px 0;"> Ticket Update</h2>
+              <textarea style="margin: 0;" id="textarea"></textarea>
+             
+            </form>
+         
+             </div>
+            </div><!-- inputBox -->
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="sideBar">
+                <div class="side">
+                  <div style="background: rgb(0, 75, 113); padding: 5px; color: #fff; text-align: center; border-left: 5px solid red;">
+                    Change Case:
+                  </div>
+                  <li style="padding-left: 10px;"><a href="index.html" target="_blank">Case Detection</a></li>
+                  <li style="padding-left: 10px;">logical Verification</li>
+                  <li style="padding-left: 10px;">Slownes</li>
+                  <li style="padding-left: 10px;">logical Instability</li>
+                  <li style="padding-left: 10px;">Browsing</li>
+                  <li style="padding-left: 10px;">Unable to optined IP</li>
+                  <li style="padding-left: 10px;">Wireles Problem</li>
+                  <li style="padding-left: 10px;">Voice Verification</li>
+                  <li style="padding-left: 10px;">Down Cases</li>
+                  <li style="padding-left: 10px;">Instability Cases</li>
+                  <li style="padding-left: 10px;">Bad line Qulity</li>
+                  <li style="padding-left: 10px;">Wrong Card & Port</li>
+                  <li style="padding-left: 10px;">CPE Acsses</li>
+                  <li style="padding-left: 10px;">HDM Offline</li>
+                  <li style="padding-left: 10px;">Visites</li>
+                  <div style="background: rgb(0, 75, 113); padding: 5px; color: #fff; text-align: center; border-left: 5px solid red;">
+                    Quick Jamp
+                  </div>
+                  <li style="padding-left: 10px;">Physical SLA Tool <span style="color: red;">new</span></li>
+                  <li style="padding-left: 10px;">CPE Configraiton</li>
+                  <li style="padding-left: 10px;">OS Configraiton</li>
+                  <li style="padding-left: 10px;">ASSIA Artical</li>
+                  <li style="padding-left: 10px;">BSS Artical</li>
+                  <li style="padding-left: 10px;">IVR</li>
+                  <li style="padding-left: 10px;">Branches</li>
+                </div>
+            </div>
+        </div>
+        
+     </div>
+     <script src="JS/Script.js"></script>
+  </body>
+</html>
